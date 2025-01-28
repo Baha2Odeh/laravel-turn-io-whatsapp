@@ -11,7 +11,7 @@ class MessageResponse
 {
     public function __construct(
         public string $id,
-        public array $contacts,
+        public ?array $contacts,
     ) {
         //
     }
