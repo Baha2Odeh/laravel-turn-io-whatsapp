@@ -6,7 +6,7 @@ use MissaelAnda\Whatsapp\Whatsapp as ConcreteWhatsapp;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @method static array send(string|string[] $phones, \MissaelAnda\Whatsapp\WhatsappMessage $message)
+ * @method static array send(string|string[] $phones, \MissaelAnda\Whatsapp\Messages\WhatsappMessage $message)
  * @method static \MissaelAnda\Whatsapp\Whatsapp client(string $numberId, string $token)
  * @method static \MissaelAnda\Whatsapp\Whatsapp token(string $token)
  * @method static \MissaelAnda\Whatsapp\Whatsapp numberId(string $numberId)
