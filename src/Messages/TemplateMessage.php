@@ -124,7 +124,10 @@ class TemplateMessage extends WhatsappMessage
         $data = [
             'template' => [
                 'name' => $this->name,
-                'language' => ['code' => $this->language],
+                'language' => [
+                    'code' => $this->language,
+                    'policy' => 'deterministic'
+                ],
                 'components' => collect([
                     $this->header,
                     $this->body,
@@ -140,7 +143,8 @@ class TemplateMessage extends WhatsappMessage
         ];
 
         if ($this->namespace) {
-            $data['namespace'] = $this->namespace;
+            //$data['namespace'] = $this->namespace;
+            $data['template']['namespace'] = $this->namespace;
         }
 
         return $data;
