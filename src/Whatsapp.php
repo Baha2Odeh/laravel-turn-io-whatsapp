@@ -253,8 +253,8 @@ class Whatsapp
     protected function buildMessage(string $phone, WhatsappMessage $message): array
     {
         $data = array_merge([
-            'messaging_product' => 'whatsapp',
-            'recipient_type' => 'individual',
+            //'messaging_product' => 'whatsapp',
+            //'recipient_type' => 'individual',
             'to' => $phone,
             'type' => $message->getMessageType(),
         ], $message->toArray());
