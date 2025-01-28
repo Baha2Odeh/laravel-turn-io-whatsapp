@@ -273,7 +273,7 @@ class Whatsapp
 
     protected function buildApiEndpoint(string $for, bool $withNumberId = true): string
     {
-        return Str::of(static::WHATSAPP_API_URL)
+        return Str::of(Config::get('whatsapp.whatsapp_api_url',static::WHATSAPP_API_URL))
             ->replace('{{VERSION}}', static::WHATSAPP_API_VERSION)
             ->when($withNumberId, fn ($str) => $str->append('/', $this->numberId))
             ->append('/', $for);
