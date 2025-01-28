@@ -200,6 +200,11 @@ return [
     'default_number_id' => env('WHATSAPP_NUMBER_ID'),
 
     /**
+     * The default Whatsapp API Url used to send the messages.
+     */
+    'whatsapp_api_url' => env('WHATSAPP_API_URL'),
+
+    /**
      * If you want to use other number id's you can add them here so you can call
      * `numberName` with the name you provide here and make it easier to change
      * the phone where the messages are sended.
