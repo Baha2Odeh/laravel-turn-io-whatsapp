@@ -281,7 +281,7 @@ class Whatsapp
 
     protected function sendRequest(string $url, string $method, array $data = []): Response
     {
-        /** @var Response */
+        /** @var Response $response */
         $response = $this->request()->{strtolower($method)}($url, $data);
 
         if (!$response->successful()) {
